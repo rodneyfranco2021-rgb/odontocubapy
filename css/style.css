@@ -1,0 +1,111 @@
+/* Quitamos los espacios que pone el navegador por defecto */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general de la página */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Barra superior */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+}
+
+/* Logo */
+header h2{
+    color: #0B4EA2;
+}
+
+/* Menú */
+nav a{
+    text-decoration: none;
+    color: #333;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+nav a:hover{
+    color:#0B4EA2;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 120px 100px;
+    background-image: url("../img/portadadoctores.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 450px;
+}
+
+
+.hero h1 {
+    font-size: 45px;
+    color: #0066cc;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.hero a {
+    display: inline-block;
+    background-color: #0066cc;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.logo {
+    width: 60px;
+    height: auto;
+}
+.logo-grande {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    display: block;
+}
+.hero-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 450px;
+    margin-left: -30px;
+}
+.servicios {
+    padding: 80px 100px;
+    background: #f8f9fb;
+}
+
+.servicios h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #0B4EA2;
+    margin-bottom: 50px;
+}
+.contenedor-servicios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+.servicio {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    text-align: center;
+}
