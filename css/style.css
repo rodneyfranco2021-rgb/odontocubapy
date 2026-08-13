@@ -109,3 +109,64 @@ nav a:hover{
     box-shadow: 0 8px 20px rgba(0,0,0,.08);
     text-align: center;
 }
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 500px;
+        padding: 60px 25px;
+        background-position: center;
+        align-items: center;
+    }
+
+    .hero-contenido {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .logo-grande {
+        width: 300px;
+        max-width: 100%;
+    }
+
+    .hero p {
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    .servicios {
+        padding: 50px 20px;
+    }
+
+    .servicios h2 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .contenedor-servicios {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .servicio {
+        padding: 25px;
+    }
+}
