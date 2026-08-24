@@ -11,6 +11,7 @@
 <body>
     <header>
 <img class="logo" src="img/logopequeño.png" alt="Logo de Odontocuba">
+<button class="menu-toggle" aria-label="Abrir menú">☰</button>
     <nav>
         <a href="#">Inicio</a>
         <a href="#">Nosotros</a>
@@ -55,6 +56,14 @@
 
     </div>
 </section>
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('activo');
+    });
+</script>
 
 </body>
 
