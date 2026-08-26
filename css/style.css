@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Bubblebody Neue';
+    src: url('../fonts/BubblebodyNeue-BoldTrial.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 /* Quitamos los espacios que pone el navegador por defecto */
 *{
     margin: 0;
@@ -55,8 +61,10 @@ nav a:hover{
 }
 
 .hero p {
+    font-family: 'Bubblebody Neue', sans-serif;
     font-size: 20px;
     margin: 20px 0;
+    color: #0066cc;
 }
 
 .hero a {
@@ -93,6 +101,8 @@ nav a:hover{
 
 .servicios h2 {
     text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
     font-size: 40px;
     color: #0B4EA2;
     margin-bottom: 50px;
@@ -108,6 +118,7 @@ nav a:hover{
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0,0,0,.08);
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 .menu-toggle {
     display: none;
@@ -117,6 +128,120 @@ nav a:hover{
     cursor: pointer;
     color: #0B4EA2;
 }
+/* Sucursales */
+.sucursales {
+    padding: 80px 100px;
+    background: white;
+}
+
+.sucursales h2 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #0B4EA2;
+    margin-bottom: 50px;
+}
+
+.contenedor-sucursales {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sucursal {
+    background: #f8f9fb;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+.sucursal h3 {
+    font-size: 25px;
+    color: #0B4EA2;
+    margin-bottom: 8px;
+}
+
+.sucursal h4 {
+    font-size: 20px;
+    color: #333;
+}
+/* SUCURSALES */
+
+.sucursales {
+    padding: 80px 100px;
+    background: #f8f9fb;
+}
+
+.sucursales h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #0B4EA2;
+    margin-bottom: 40px;
+}
+
+.contenedor-sucursales {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.sucursal {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.mapa-sucursal {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.sucursal h3 {
+    color: #0B4EA2;
+    font-size: 24px;
+    margin-top: 25px;
+}
+
+.sucursal h4 {
+    font-size: 18px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.botones-sucursal {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.boton-mapa,
+.boton-agenda {
+    padding: 12px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.boton-mapa {
+    background: #f0f0f0;
+    color: #0B4EA2;
+}
+
+.boton-agenda {
+    background: #0066cc;
+    color: white;
+}
 @media (max-width: 768px) {
 
     header {
@@ -125,6 +250,7 @@ nav a:hover{
     justify-content: space-between;
     align-items: center;
     position: relative;
+    
 }
 
 .logo {
@@ -171,18 +297,24 @@ nav a {
 }
 
     .hero-contenido {
-        margin-left: 0;
-        max-width: 100%;
-    }
+    margin-left: 0;
+    max-width: 100%;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    transform: translateY(180px);
+}
 
     .logo-grande {
         width: 230px;
         max-width: 100%;
+        transform: translateY(50px);
     }
 
     .hero p {
         font-size: 17px;
         line-height: 1.4;
+        margin-top: 30px;
     }
 
     .servicios {
@@ -202,4 +334,38 @@ nav a {
     .servicio {
         padding: 25px;
     }
+    .sucursales {
+    padding: 50px 20px;
+}
+
+.sucursales h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.contenedor-sucursales {
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.sucursal {
+    width: 100%;
+}
+
+.mapa-sucursal {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.botones-sucursal {
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.boton-mapa,
+.boton-agenda {
+    width: 100%;
+    text-align: center;
+}
 }
