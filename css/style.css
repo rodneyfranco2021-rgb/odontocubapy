@@ -16,31 +16,78 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Barra superior */
-header{
+.header-principal {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    justify-content: space-between;
+    padding: 12px 40px;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,.06);
+    position: relative;
+    z-index: 1000;
 }
 
-/* Logo */
-header h2{
-    color: #0B4EA2;
-}
+/* Logo del header */
 
-/* Menú */
-nav a{
+.header-logo {
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    color: #333;
-    margin-left: 30px;
-    font-weight: bold;
 }
 
-nav a:hover{
-    color:#0B4EA2;
+.header-logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+/* Menú principal */
+
+.menu-principal {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: #1f2d3d;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+}
+
+.menu-principal a:hover,
+.menu-principal .activo-menu {
+    color: #0057c8;
+}
+
+.menu-principal .activo-menu::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    height: 2px;
+    background: #0057c8;
+    border-radius: 10px;
+}
+/* Botón Agenda tu cita del header */
+
+.header-agenda {
+    background: #0057c8;
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 11px 18px;
+    border-radius: 7px;
+}
+
+.header-agenda:hover {
+    background: #0049aa;
 }
 .hero {
     display: flex;
@@ -75,10 +122,7 @@ nav a:hover{
     border-radius: 5px;
     text-decoration: none;
 }
-.logo {
-    width: 60px;
-    height: auto;
-}
+
 .logo-grande {
     width: 500px;
     max-width: 100%;
@@ -93,6 +137,147 @@ nav a:hover{
     text-align: left;
     max-width: 450px;
     margin-left: -30px;
+}
+/* HERO NUEVO */
+
+.hero-nuevo {
+    display: grid;
+    grid-template-columns: 42% 58%;
+    min-height: 520px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.hero-texto {
+    padding: 55px 35px 45px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-imagen {
+    background-image: url("../img/portadadoctores.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* Textos del Hero */
+
+.hero-etiqueta {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #0057c8;
+    margin-bottom: 10px;
+}
+
+.hero-texto h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    line-height: 1.12;
+    font-weight: 700;
+    color: #10213b;
+    margin: 0 0 18px 0;
+}
+
+.hero-texto h1 span {
+    color: #0057c8;
+}
+
+.hero-texto > p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #526071;
+    margin: 0 0 24px 0;
+}
+/* Botones del Hero */
+
+.hero-botones {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.hero-agenda,
+.hero-servicios {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 7px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-agenda {
+    background: #0057c8;
+    color: #ffffff;
+    gap: 8px;
+}
+.whatsapp-icon {
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+.hero-agenda:hover {
+    background: #0049aa;
+}
+
+.hero-servicios {
+    background: #ffffff;
+    color: #0057c8;
+    border: 1px solid #0057c8;
+}
+
+.hero-servicios:hover {
+    background: #f3f7ff;
+}
+/* Beneficios del Hero */
+
+.hero-beneficios {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 5px;
+}
+
+.beneficio {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.beneficio-icono {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    display: block;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.beneficio div {
+    display: flex;
+    flex-direction: column;
+}
+
+.beneficio strong {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #24344d;
+    white-space: nowrap;
+}
+
+.beneficio small {
+    font-family: 'Poppins', sans-serif;
+    font-size: 9px;
+    color: #657386;
+    white-space: nowrap;
 }
 .servicios {
     padding: 80px 100px;
@@ -250,7 +435,155 @@ nav a:hover{
     justify-content: space-between;
     align-items: center;
     position: relative;
-    
+}
+    /* ===== NUEVO DISEÑO MOBILE ===== */
+
+/* Header */
+.header-principal {
+    padding: 10px 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo img {
+    width: 105px;
+}
+
+.header-agenda {
+    display: none;
+}
+
+.menu-toggle {
+    display: block;
+    font-size: 26px;
+}
+
+.menu-principal {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 22px;
+    box-shadow: 0 8px 15px rgba(0,0,0,.08);
+    z-index: 1000;
+}
+
+.menu-principal.activo {
+    display: flex;
+}
+
+.menu-principal a {
+    font-size: 14px;
+}
+
+.menu-principal .activo-menu::after {
+    display: none;
+}
+
+
+/* Hero */
+.hero-nuevo {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+}
+
+.hero-texto {
+    order: 1;
+    padding: 32px 16px 20px;
+}
+
+.hero-etiqueta {
+    font-size: 9px;
+    margin-bottom: 7px;
+}
+
+.hero-texto h1 {
+    font-size: 27px;
+    line-height: 1.12;
+    margin-bottom: 14px;
+}
+
+.hero-texto > p {
+    font-size: 11px;
+    line-height: 1.55;
+    margin-bottom: 18px;
+}
+
+.hero-texto > p br {
+    display: none;
+}
+
+
+/* Botones */
+.hero-botones {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+.hero-agenda,
+.hero-servicios {
+    width: 100%;
+    min-height: 42px;
+    padding: 10px 12px;
+    font-size: 11px;
+}
+
+.whatsapp-icon {
+    width: 24px;
+    height: 24px;
+}
+
+
+/* Beneficios */
+.hero-beneficios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
+    margin-top: 0;
+}
+
+.beneficio {
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    gap: 4px;
+}
+
+.beneficio-icono {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    margin: 0 auto;
+}
+
+.beneficio strong {
+    font-size: 8px;
+    white-space: normal;
+}
+
+.beneficio small {
+    font-size: 7px;
+    line-height: 1.2;
+    white-space: normal;
+}
+
+
+/* Foto debajo del contenido */
+.hero-imagen {
+    order: 2;
+    width: 100%;
+    height: 235px;
+    background-position: center;
 }
 
 .logo {
