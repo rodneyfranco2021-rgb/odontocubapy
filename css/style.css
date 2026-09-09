@@ -279,31 +279,120 @@ body{
     color: #657386;
     white-space: nowrap;
 }
+/* =========================
+   NUEVA SECCIÓN SERVICIOS
+========================= */
+
 .servicios {
-    padding: 80px 100px;
-    background: #f8f9fb;
+    padding: 75px 60px 85px;
+    background: #f7faff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.servicios-encabezado {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 45px;
+}
+
+.servicios-etiqueta {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: #1671e8;
+    margin-bottom: 18px;
 }
 
 .servicios h2 {
-    text-align: center;
     font-family: 'Poppins', sans-serif;
+    font-size: 52px;
+    line-height: 1.1;
     font-weight: 700;
-    font-size: 40px;
-    color: #0B4EA2;
-    margin-bottom: 50px;
+    color: #0b3f9f;
+    margin-bottom: 18px;
 }
+
+.servicios-encabezado p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #50647f;
+}
+
 .contenedor-servicios {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-width: 1280px;
+    margin: 0 auto;
 }
+
 .servicio {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    background: #ffffff;
+    min-height: 390px;
+    padding: 30px 24px 26px;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(26, 71, 132, 0.08);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.servicio-icono {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: #f0f7ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+}
+
+.servicio-icono img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.servicio h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0c2760;
     text-align: center;
-    font-family: 'Poppins', sans-serif;
+    margin-bottom: 12px;
+}
+
+.servicio > p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #536984;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.servicio-link {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #0066dd;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.servicio-flecha {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #eef6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    font-weight: 400;
+    color: #0066dd;
 }
 .menu-toggle {
     display: none;
@@ -353,6 +442,126 @@ body{
 .sucursal h4 {
     font-size: 20px;
     color: #333;
+}
+/* =========================
+   NUESTROS ESPECIALISTAS
+========================= */
+
+.especialistas {
+    padding: 75px 30px 85px;
+    background: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.especialistas-encabezado {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.especialistas-etiqueta {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    color: #1671e8;
+    margin-bottom: 14px;
+}
+
+.especialistas h2 {
+    font-size: 52px;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #0c2760;
+    margin-bottom: 14px;
+}
+
+.especialistas h2 span {
+    color: #1671e8;
+}
+
+.especialistas-encabezado p {
+    font-size: 16px;
+    color: #536984;
+}
+
+.especialistas-linea {
+    width: 45px;
+    height: 3px;
+    background: #1671e8;
+    margin: 20px auto 0;
+    border-radius: 10px;
+}
+
+
+/* DIRECTORES */
+
+.directores {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    max-width: 760px;
+    margin: 0 auto 20px;
+}
+
+.especialista {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(26, 71, 132, 0.10);
+}
+
+.especialista-director .especialista-foto {
+    height: 430px;
+}
+
+.especialista-foto {
+    background: #eef7ff;
+    overflow: hidden;
+}
+
+.especialista-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.especialista-info {
+    padding: 14px 10px 16px;
+    text-align: center;
+}
+
+.especialista-info h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0c2760;
+    line-height: 1.25;
+}
+
+.especialista-info p {
+    font-size: 14px;
+    color: #1671e8;
+    margin-top: 5px;
+}
+
+
+/* RESTO DEL EQUIPO */
+
+.equipo-especialistas {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.equipo-especialistas .especialista-foto {
+    height: 310px;
+}
+
+.equipo-especialistas .especialista-info h3 {
+    font-size: 16px;
 }
 /* SUCURSALES */
 
@@ -650,23 +859,76 @@ nav a {
         margin-top: 30px;
     }
 
-    .servicios {
-        padding: 50px 20px;
-    }
+    /* ===== SERVICIOS MOBILE ===== */
 
-    .servicios h2 {
-        font-size: 30px;
-        margin-bottom: 30px;
-    }
+.servicios {
+    padding: 50px 18px 60px;
+}
 
-    .contenedor-servicios {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
+.servicios-encabezado {
+    margin-bottom: 30px;
+}
 
-    .servicio {
-        padding: 25px;
-    }
+.servicios-etiqueta {
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.servicios h2 {
+    font-size: 30px;
+    margin-bottom: 14px;
+}
+
+.servicios-encabezado p {
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.servicios-encabezado p br {
+    display: none;
+}
+
+.contenedor-servicios {
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.servicio {
+    min-height: 330px;
+    padding: 25px 22px 22px;
+}
+
+.servicio-icono {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 18px;
+}
+
+.servicio-icono img {
+    width: 150px;
+    height: 150px;
+}
+
+.servicio h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.servicio > p {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.servicio-link {
+    font-size: 12px;
+}
+
+.servicio-flecha {
+    width: 38px;
+    height: 38px;
+    font-size: 20px;
+}
     .sucursales {
     padding: 50px 20px;
 }
@@ -700,5 +962,68 @@ nav a {
 .boton-agenda {
     width: 100%;
     text-align: center;
+}
+/* ===== ESPECIALISTAS MOBILE ===== */
+
+.especialistas {
+    padding: 50px 15px 60px;
+}
+
+.especialistas-encabezado {
+    margin-bottom: 30px;
+}
+
+.especialistas-etiqueta {
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.especialistas h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.especialistas-encabezado p {
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.especialistas-linea {
+    margin-top: 15px;
+}
+
+.directores {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 100%;
+    margin-bottom: 16px;
+}
+
+.especialista-director .especialista-foto {
+    height: 400px;
+}
+
+.equipo-especialistas {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 100%;
+}
+
+.equipo-especialistas .especialista-foto {
+    height: 400px;
+}
+
+.especialista-info {
+    padding: 14px 10px 16px;
+}
+
+.especialista-info h3,
+.equipo-especialistas .especialista-info h3 {
+    font-size: 18px;
+}
+
+.especialista-info p {
+    font-size: 13px;
 }
 }
