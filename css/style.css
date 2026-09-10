@@ -191,6 +191,10 @@ body{
     color: #526071;
     margin: 0 0 24px 0;
 }
+.texto-odontocuba {
+    color: #0057c8;
+    font-weight: 600;
+}
 /* Botones del Hero */
 
 .hero-botones {
@@ -704,8 +708,12 @@ body{
 }
 
 .hero-texto {
-    order: 1;
-    padding: 32px 16px 20px;
+    order: 2;
+    padding: 35px 16px 20px;
+    margin-top: -150px;
+    position: relative;
+    z-index: 2;
+    background: transparent;
 }
 
 .hero-etiqueta {
@@ -789,10 +797,14 @@ body{
 
 /* Foto debajo del contenido */
 .hero-imagen {
-    order: 2;
+    order: 1;
     width: 100%;
     height: 235px;
     background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 72%, rgba(0,0,0,0.85) 80%, rgba(0,0,0,0.45) 92%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 72%, rgba(0,0,0,0.85) 80%, rgba(0,0,0,0.45) 92%, transparent 100%);
 }
 
 .logo {
