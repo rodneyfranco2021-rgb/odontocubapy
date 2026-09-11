@@ -14,6 +14,8 @@
 /* Estilo general de la página */
 body{
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .header-principal {
@@ -84,6 +86,10 @@ body{
     font-weight: 600;
     padding: 11px 18px;
     border-radius: 7px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
 }
 
 .header-agenda:hover {
@@ -227,6 +233,12 @@ body{
     fill: currentColor;
     flex-shrink: 0;
 }
+
+.header-agenda .whatsapp-icon {
+    width: 20px;
+    height: 20px;
+}
+
 .hero-agenda:hover {
     background: #0049aa;
 }
@@ -570,8 +582,8 @@ body{
 /* SUCURSALES */
 
 .sucursales {
-    padding: 80px 100px;
-    background: #f8f9fb;
+    padding: 80px 100px 120px;
+    background: #ffffff;
 }
 
 .sucursales h2 {
@@ -586,7 +598,7 @@ body{
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 0 auto 50px;
 }
 
 .sucursal {
@@ -640,6 +652,150 @@ body{
     background: #0066cc;
     color: white;
 }
+
+/* =========================
+   FOOTER ODONTOCUBA
+========================= */
+
+.footer-odontocuba {
+    background: #ffffff;
+    color: #0c2760;
+    padding: 60px 70px 5px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.08);
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+.footer-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-marca img {
+    width: 420px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.footer-redes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer-redes p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.4;
+    color: #0B4EA2;
+    margin-bottom: 25px;
+    white-space: nowrap;
+}
+
+.footer-redes h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 38px;
+    line-height: 1.15;
+    font-weight: 700;
+    color: #0c2760;
+    margin-bottom: 25px;
+    white-space: nowrap;
+}
+
+.footer-redes h2 span {
+    color: #1671e8;
+}
+
+.footer-iconos {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.footer-iconos a {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.footer-iconos svg {
+    width: 26px;
+    height: 26px;
+    fill: #ffffff;
+}
+
+.footer-iconos span {
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.red-whatsapp {
+    background: #25D366;
+}
+
+.red-instagram {
+    background: linear-gradient(135deg, #833AB4, #FD1D1D, #FCAF45);
+}
+
+.red-facebook {
+    background: #1877F2;
+}
+
+.red-facebook svg {
+    width: 31px;
+    height: 31px;
+}
+
+.red-tiktok {
+    background: #000000;
+}
+
+.footer-inferior p,
+.footer-agencia span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #0c2760;
+}
+
+.footer-inferior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding-top: 20px;
+}
+
+.footer-agencia {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-agencia img {
+    width: 110px;
+    height: auto;
+    display: block;
+}
+
+
 @media (max-width: 768px) {
 
     header {
