@@ -583,7 +583,7 @@ body{
 
 .sucursales {
     padding: 80px 100px 120px;
-    background: #ffffff;
+    background: #f7faff;
 }
 
 .sucursales h2 {
@@ -654,77 +654,144 @@ body{
 }
 
 /* =========================
-   FOOTER ODONTOCUBA
+   FOOTER ODONTOCUBA - PC
 ========================= */
 
 .footer-odontocuba {
+    position: relative;
+    overflow: hidden;
     background: #ffffff;
     color: #0c2760;
-    padding: 60px 70px 5px;
     font-family: 'Poppins', sans-serif;
-    box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.08);
+    padding: 80px 70px 35px;
     width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
+    box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.06);
 }
 
+/* CURVA CELESTE */
+
+.footer-odontocuba::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 165px;
+    background: #f3f8ff;
+    z-index: 0;
+}
+
+.footer-odontocuba::after {
+    display: none;
+}
+
+/* CONTENIDO SUPERIOR */
+
 .footer-contenido {
+    position: relative;
+    z-index: 2;
     display: grid;
-    grid-template-columns: 1fr 1px 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 60px;
-    max-width: 1200px;
+    gap: 100px;
+    max-width: 1350px;
     margin: 0 auto;
 }
 
+/* LOGO */
+
+.footer-marca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .footer-marca img {
-    width: 420px;
+    width: 470px;
     max-width: 100%;
     height: auto;
     display: block;
 }
 
+/* ES TU SOLUCIÓN */
+
+.footer-solucion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    margin-top: 20px;
+}
+
+.footer-solucion span {
+    width: 75px;
+    height: 1px;
+    background: #6fa8e8;
+}
+
+.footer-solucion p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 6px;
+    color: #3269ad;
+    white-space: nowrap;
+    margin: 0;
+}
+
+/* DIVISOR VERTICAL */
+
+.footer-contenido::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 185px;
+    background: #b8d5f5;
+}
+
+/* REDES */
+
 .footer-redes {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: flex-start;
-}
-
-.footer-redes p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    line-height: 1.4;
-    color: #0B4EA2;
-    margin-bottom: 25px;
-    white-space: nowrap;
+    text-align: center;
 }
 
 .footer-redes h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 38px;
-    line-height: 1.15;
-    font-weight: 700;
-    color: #0c2760;
-    margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #3269ad;
+    margin-bottom: 35px;
     white-space: nowrap;
 }
 
 .footer-redes h2 span {
-    color: #1671e8;
+    color: #3269ad;
 }
+
+/* ICONOS */
 
 .footer-iconos {
     display: flex;
     align-items: center;
-    gap: 18px;
+    justify-content: center;
+    gap: 38px;
 }
 
 .footer-iconos a {
-    width: 52px;
-    height: 52px;
+    width: 72px;
+    height: 72px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -733,16 +800,9 @@ body{
 }
 
 .footer-iconos svg {
-    width: 26px;
-    height: 26px;
+    width: 36px;
+    height: 36px;
     fill: #ffffff;
-}
-
-.footer-iconos span {
-    color: #ffffff;
-    font-size: 30px;
-    line-height: 1;
-    font-weight: 700;
 }
 
 .red-whatsapp {
@@ -758,41 +818,53 @@ body{
 }
 
 .red-facebook svg {
-    width: 31px;
-    height: 31px;
+    width: 42px;
+    height: 42px;
 }
 
 .red-tiktok {
     background: #000000;
 }
 
-.footer-inferior p,
-.footer-agencia span {
-    font-family: 'Poppins', sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    color: #0c2760;
-}
+/* PARTE INFERIOR */
 
 .footer-inferior {
+    position: relative;
+    z-index: 2;
+    max-width: 1350px;
+    margin: 135px auto 0;
+    padding-top: 30px;
+    border-top: 1px solid #b8d5f5;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 30px auto 0;
-    padding-top: 20px;
+}
+
+.footer-inferior p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3269ad;
 }
 
 .footer-agencia {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 18px;
+}
+
+.footer-agencia span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3269ad;
 }
 
 .footer-agencia img {
-    width: 110px;
+    width: 145px;
     height: auto;
     display: block;
+
 }
 
 
@@ -805,6 +877,8 @@ body{
     align-items: center;
     position: relative;
 }
+
+    
     /* ===== NUEVO DISEÑO MOBILE ===== */
 
 /* Header */
@@ -961,6 +1035,27 @@ body{
     background-repeat: no-repeat;
     -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 72%, rgba(0,0,0,0.85) 80%, rgba(0,0,0,0.45) 92%, transparent 100%);
     mask-image: linear-gradient(to bottom, #000 0%, #000 72%, rgba(0,0,0,0.85) 80%, rgba(0,0,0,0.45) 92%, transparent 100%);
+}
+
+.hero-imagen {
+    position: relative;
+}
+
+.hero-imagen::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 55%;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.35) 45%,
+        rgba(255, 255, 255, 0.75) 75%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    pointer-events: none;
 }
 
 .logo {
@@ -1194,4 +1289,208 @@ nav a {
 .especialista-info p {
     font-size: 13px;
 }
+/* ===== FOOTER MOBILE ===== */
+
+.footer-odontocuba {
+    padding: 38px 20px 18px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-odontocuba::before {
+    content: "";
+    position: absolute;
+    left: -10%;
+    bottom: -20px;
+    width: 120%;
+    height: 190px;
+    background: #f3f8ff;
+    z-index: -1;
+}
+
+.footer-odontocuba::after {
+    content: "";
+    position: absolute;
+    left: -15%;
+    bottom: 105px;
+    width: 130%;
+    height: 100px;
+    background: #ffffff;
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    z-index: -1;
+}
+
+/* Logo + Es tu solución */
+
+.footer-marca {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-marca img {
+    width: 230px;
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-solucion {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.footer-solucion span {
+    width: 42px;
+    height: 1px;
+    background: #b8d5f5;
+}
+
+.footer-solucion p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: #5f7fa8;
+    white-space: nowrap;
+    margin: 0;
+}
+
+/* Contenido principal */
+
+.footer-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+}
+
+/* Redes sociales */
+
+.footer-redes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-redes h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #5f7fa8;
+    white-space: normal;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-redes h2 span {
+    color: #5f7fa8;
+}
+
+/* Iconos */
+
+.footer-iconos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-iconos a {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.footer-iconos a::after {
+    content: "";
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    border: 1px solid #b8d5f5;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.footer-iconos svg {
+    width: 23px;
+    height: 23px;
+}
+
+.red-facebook svg {
+    width: 27px;
+    height: 27px;
+}
+
+/* Parte inferior */
+
+.footer-inferior {
+    width: 100%;
+    margin: 15px auto 0;
+    padding-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-inferior p {
+    width: 48%;
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.footer-agencia {
+    width: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.footer-agencia span {
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+.footer-agencia img {
+    width: 90px;
+    max-width: 55%;
+    height: auto;
+}
+.footer-agencia img {
+    width: 90px;
+    max-width: 55%;
+    height: auto;
+}
+
+/* PRUEBA COLORES HERO MOBILE */
+.hero-texto h1 {
+    color: #0057c8 !important;
+}
+
+.hero-texto h1 span {
+    color: #0c2760 !important;
+}
+
+.hero-etiqueta {
+    color: #0c2760 !important;
+}
+.footer-contenido::before {
+    display: none !important;
+}
+
 }
